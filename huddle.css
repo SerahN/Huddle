@@ -1,150 +1,414 @@
 *{
-    box-sizing: border-box;
     padding: 0;
-    border: 0;
-}
-body{
-    font-size: 18px;
-    padding: 0;
-    border: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-main{
-    width: 100%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+
+:root{
+   --font-size:18px;
+   --font-heading-weight:600;
+   --font-weight-1:400;
+   --font-weight-2:700;
+   --font-heading:'Poppins',sans-serif;
+   --font-body:'Open Sans',sans-serif;
+}
+html {
+    /* this defines what 1rem is*/
+    font-size: 62.5%; }
+
+.header{
     height: 100vh;
-}
-.MAIN{
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-}
-.div1{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    flex-direction: row;
+    background-image:  url(bg-hero-desktop.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: hsl(193, 100%, 96%);
-    width: 100%;
-    padding-top: 10px;
-    padding-bottom: 15px;
 }
-.div1a{
-    width: 40%;
-    flex-direction: column;
-    padding-left: 30px;
-}
-.div1ai{
-    align-items: top;
-}
-.div1aii{
-    align-items: center;
-    padding-top: 120px;
-}
-/*.div1aii h2,p {
-    text-align: left;
-}*/
-.div1aii button{
-    background-color: hsl(154, 59%, 51%);
-    color: white;
+
+.header-navbar {
     display: flex;
-    justify-content: center;
-    font-weight: 600;
-    padding: 15px;
-    border-radius: 50px;  
-    width: 250px; 
-    text-align: center;
+    justify-content: space-between;
+    padding: 5rem;
+    padding-right: 6rem;
 }
-.div1b{
-    width:60%;
-    flex-direction: column;
-    padding-right: 30px;
+
+.logo {
+    height: 2.3rem;
 }
-.div1bi{
-    align-items: right;
+
+button{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.8rem;
+    border: #fff;
+    border-radius: 2.5rem;
+    padding: 1.3rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    font-family: var(--font-body);
+    font-weight: var(--font-weight-1);
+    cursor: pointer;
+
+}
+.button{
+    background-color: #fff;
+    box-shadow: .3rem .3rem .6rem rgba(0, 0, 0, .1);
+}
+
+.header-text {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: 4.5rem;
+    animation-name: header-text;
+    animation-duration: 2s;
+}
+
+@keyframes header-text {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+.header--text{
+    height: 40vh;
+    align-items: center;
+    margin: 3rem;
     
 }
-.div1bi button{
-    background-color: hsl(154, 59%, 51%);
-    color: white;
-    padding: 10px;
-    border-radius: 50px;
-    text-align: center;
+
+.header--text h2{
+    font-size: 4rem;
+    text-transform: capitalize;
+    font-weight: var(--font-heading-weight);
+    font-family: var(--font-heading);
+    line-height: 1.4;
+    padding-top: 7.5rem;
+    padding-left: 4rem;
+
+}
+.header--text h3{
+    font-size: 1.8rem;
+    color: #222;
+    padding-top: 2rem;
+    line-height: 1.4;
+    padding-left: 4rem;
+}
+
+.header-text-button {
+    padding-top: 3rem;
+    padding-left: 4rem;
+}
+
+a{
+    text-decoration: none;
+    font-size: 1.8rem;
+    border: .1rem solid hsl(322, 100%, 66%);
+    background-color: hsl(322, 100%, 66%);
+    color: #fff;
+    padding: 1.2rem 4rem 1.2rem 4rem;
+    border-radius: 3rem;
+}
+
+.header--text-image {
+    height: 40rem;
+    animation-name: header-image;
+    animation-duration: 2s;
+}
+@keyframes header-image {
+    from {
+            transform: translateX(100%);
+        }
+    
+        to {
+            transform: translateX(0%);
+        }
+}
+
+
+.body {
+    height: 190vh;
+    background-color: #fff;
+    width: 96%;
+    margin-top: 5rem;
+    
+}
+
+.body-box1 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: .2rem .2rem .2rem .4rem rgba(0, 0, 0, .10);
+    margin-left: 10rem;
+    margin-right: 5rem;
+    border-radius: 1.5rem;
+    
+}
+
+.body-box1a {
+    height: 48vh;
+    padding: 0 1rem 0 1rem; 
+}
+
+.body-box1ai {
+    margin-top: 8rem;
+    margin-left: 15rem;
+}
+
+.body-box1ai h2{
+    font-size: 3rem;
+    font-weight:  700;
+    font-family: var(--font-heading);
+    
+}
+
+.body-box1ai h3{
+    padding-top: 1.9rem;
     font-weight: 600;
+    color: hsl(208, 11%, 55%);
+    line-height: 1.25;
+    font-size: 1.8rem;
+}
+.body-box1a-image {
+    height: 30rem;
+}
+.body-box2 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: .2rem .2rem .2rem .4rem rgba(0, 0, 0, .10);
+    margin-left: 10rem;
+    margin-right: 5rem;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+}
+.body-box2a {
+    height: 48vh;
+     
+}
+
+.body-box2ai {
+    margin-left: 55rem;
+    margin-top: -23rem;   
+}
+
+.body-box2ai h2{
+    font-size: 3rem;
+    font-weight:  700;
+    font-family: 'Open Sans';
+    
+}
+
+.body-box2ai h3{
+    padding-top: 1.9rem;
+    font-weight: 600;
+    color: hsl(208, 11%, 55%);
+    line-height: 1.25;
+    font-size: 1.8rem;
+}
+
+
+
+
+.body-box2a-image {
+    height: 30rem;
+}
+
+.body-box3 {
+    display: flex;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: .2rem .2rem .2rem .4rem rgba(0, 0, 0, .10);
+    margin-left: 10rem;
+    margin-right: 5rem;
+    border-radius: 1.5rem;
+    margin-top: 3rem;
+}
+
+.body-box3a {
+    height: 48vh;
+    padding: 0 1rem 0 1rem; 
+}
+
+.body-box3ai {
+    margin-top: 8rem;
+    margin-left: 15rem;
+}
+
+.body-box3ai h2{
+    font-size: 3rem;
+    font-weight:  700;
+    font-family: 'Open Sans';
+    
+}
+
+.body-box3ai h3{
+    padding-top: 1.9rem;
+    font-weight: var(--font-heading-weight);
+    color: hsl(208, 11%, 55%);
+    line-height: 1.25;
+    font-size: 1.8rem;
+}
+.body-box3a-image {
+    height: 30rem;
+}
+
+
+.body-box4 {
+    position: relative;
+}
+
+.body-box4a {
+    height: 30vh;
+    width: 45%;
+    background-color: #fff;
+    border-radius: 1.5rem;
+    margin: 0 35rem 7rem;
+    box-shadow: .2rem .2rem .2rem .4rem rgba(0, 0, 0, .10);
+    position: absolute;
+    top: -20%;
+    left: .8%;
+    margin-top: -13rem;
+}
+
+.body-box4ai {
+    text-align: center;
+    padding-top: 3rem;
+    font-size: 3.2rem;
+    text-transform: capitalize;
+}
+
+.body-box4a-button{
+    padding-top: 5rem;
+    padding-left: 15rem;
+}
+
+.body-box4a-buttoni {
+    padding: 1.7rem 8rem 1.7rem 8rem;
+}
+
+.footer {
+    height: 70vh;
+    background-color: hsl(192, 100%, 9%);
+}
+.footer-body-box1 {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    position: relative;
+}
+.footer-body-box1a {
+    padding: 7rem;
+    color: #fff;
+}
+.p1{
+        font-size: 1.6rem;
+        color:hsl(208, 11%, 55%); 
+        line-height: 1.3;
+        padding-left: 9rem;
+}
+.footer-image {
+    padding-top: 13rem;
+    position: relative;
+}
+.footer-imagei {
+   position: absolute;
+   left: 11%;
+}
+.span{  
+   align-items: center;
+}
+
+.location-icon {
+    height: 1.4rem;
+    position: absolute;
+    top: 25%;
+    left: 11%;
+}
+
+.p2 {
+    font-size:1.5rem;
+    color: hsl(208, 11%, 55%);
+    padding-left: 9rem;
+    padding-top: 2.2rem;
+}
+
+.phone-icon {
+    height: 1.4rem;
+    position: absolute;
+    top: 55%;
+    left: 11%;
+}
+.p3 {
+    font-size: 1.5rem;
+    color: hsl(208, 11%, 55%);
+    padding-left: 9rem;
+    padding-top: 1.8rem;
+}
+.email-icon {
+    height: 1.4rem;
+    position: absolute;
+    top: 67%;
+    left: 11%;
+}
+
+
+.footer-body-box1ai h3{
+    font-size: 1.7rem;
+    color: hsl(208, 11%, 55%);
+    padding-top: .5rem;
+}
+
+.footer-body-box1ai h4{
+    font-size: 1.5rem;
+    color: hsl(208, 11%, 55%);
+    padding-top: 2.5rem;
+    text-transform: capitalize;
+}
+
+.footer-body-box1ai h5{
+    font-size: 1.5rem;
+    color: hsl(208, 11%, 55%);
+    padding-top: 2.2rem;
+    text-transform: uppercase;
+}
+
+.footer-body-box1aii h2{
+    font-size: 1.8rem;
+    color: hsl(208, 11%, 55%);
+    padding-top: .5rem;
+}
+.footer-body-box1aii h3 {
+    font-size: 1.8rem;
+    color: hsl(208, 11%, 55%);
+    padding-top: 2.5rem;
+    text-transform: capitalize; 
+}
+
+.footer-body-box1aii h4{
+    font-size: 1.8rem;
+    color: hsl(208, 11%, 55%);
+    padding-top: 2.2rem;
+    text-transform: capitalize;
+}
+
+.footer-body-box1a-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 3.0rem;
+    height: 3.3rem;
+    padding-right: 9rem;
+}
+
+.p4 {
     position:absolute;
-     top:20px;
-     right:40px;
-    width: 120px;
+     bottom:20px;
+     right:9rem;
+    font-size: 1.2rem;
+    color: hsl(208, 11%, 55%);
 }
-.div1bii{
-    display: flex;
-    justify-content: center;
-    padding-top: 8%;
-}
-.div1bii img{
-    width: 90%;
-    height: 50%;  
-}
-.div2{
-    background-color: white;
-    padding-top: 10px;
-    padding-bottom: 15px;
-    padding-left: 20px;
-    padding-right: 20px;
-}
-.div2a{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    width: 80%;
-    height: 80vh;
-    align-items: center;
-    text-align: center;
-    border-style: outset;
-}
-.div2ai{
-    width: 60%;
-    align-items: center;
-    text-align: left;
-    justify-content: center;
-    padding-right: 10px;
-    /*padding-top: 120px;*/
-}
-.div2aii{
-    width: 40%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: right;
-    /*padding-top: 8%;*/
-}
-.div2aii img{
-    width: 80%;
-    height: 50%;  
-   
-    margin: auto;
-    /*cursor: zoom-out;
-    background-color: hsl(0, 0%, 90%);
-    transition: background-color 300ms;*/
-}
-/*body {
-    background-color: black;
-    background-blend-mode: luminosity;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Poppins', sans-serif;
-    }
-main {
-    width: 80%;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    padding: 2cm;*/
